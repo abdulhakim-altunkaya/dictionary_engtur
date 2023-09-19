@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FIREBASE_DB} from "../firebaseConfig";
-import { addDoc, collection, deleteDoc, updateDoc, onSnapshot, doc  } from 'firebase/firestore';
+import { addDoc, collection} from 'firebase/firestore';
 
 function AddSentences() {
 
@@ -34,9 +34,9 @@ function AddSentences() {
     <div className="input-container">
       <form onSubmit={saveSentences}>
         <input className="custom-input" type="text" placeholder="English Sentence"
-        value={formData.engSentence} onChange={handleChange}/>
+        name="engSentence" value={formData.engSentence} onChange={handleChange}/>
         <input className="custom-input" type="text" placeholder="Turkish Sentence" 
-        value={formData.turSentence} onChange={handleChange}/>
+        name="turSentence" value={formData.turSentence} onChange={handleChange}/>
         <button className="custom-button">Submit</button>
       </form>
     </div>
