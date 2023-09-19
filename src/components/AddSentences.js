@@ -33,9 +33,9 @@ function AddSentences() {
   return (
     <div className="input-container">
       <form onSubmit={saveSentences}>
-        <input className="custom-input" type="text" placeholder="English Sentence"
+        <input className="custom-input" type="text" placeholder="English"
         name="engSentence" value={formData.engSentence} onChange={handleChange}/>
-        <input className="custom-input" type="text" placeholder="Turkish Sentence" 
+        <input className="custom-input" type="text" placeholder="Turkish" 
         name="turSentence" value={formData.turSentence} onChange={handleChange}/>
         <button className="custom-button">Submit</button>
       </form>
