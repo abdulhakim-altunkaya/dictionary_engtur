@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import {FIREBASE_DB} from "../firebaseConfig";
 import { addDoc, collection} from 'firebase/firestore';
+import { useNavigate } from "react-router-dom";
 
 function AddSentences() {
+
+  const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
     engSentence: "",
@@ -39,6 +42,8 @@ function AddSentences() {
         name="turSentence" value={formData.turSentence} onChange={handleChange}/>
         <button className="custom-button">Submit</button>
       </form>
+      
+      <button className='custom-button' onClick={() => navigate("/search")}>Go to search area</button>
     </div>
   );
 }
